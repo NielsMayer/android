@@ -4,7 +4,7 @@
 	http://www.nielsmayer.com
 
 * Works on Android 4.2.X using Qt 5.2.1
-* Works on Linux Desktop using Qt 5.2.1
+* Works on Linux Desktop using Qt 5.2.1 (Ubuntu 12.04.4 LTS)
 * See http://quitcoding.com/?page=work#cinex 
 * Original sourcecode
   http://quitcoding.com/download/Qt5_CinematicExperience_1.0.tgz
