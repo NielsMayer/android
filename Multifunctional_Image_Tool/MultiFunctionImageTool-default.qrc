@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">qml/MultiFunctionImageTool/main.qml</file>
+        <file alias="ActionBar.qml">qml/MultiFunctionImageTool/ActionBar.qml</file>
+        <file alias="BoundingRectangle.qml">qml/MultiFunctionImageTool/BoundingRectangle.qml</file>
+        <file alias="FunctionBar.qml">qml/MultiFunctionImageTool/FunctionBar.qml</file>
+        <file alias="ImageButton.qml">qml/MultiFunctionImageTool/ImageButton.qml</file>
+        <file alias="InteractionArea.qml">qml/MultiFunctionImageTool/InteractionArea.qml</file>
+        <file alias="MainPage.qml">qml/MultiFunctionImageTool/MainPage.qml</file>
+        <file alias="MessageDialog.qml">qml/MultiFunctionImageTool/MessageDialog.qml</file>
+        <file alias="images/QrButton_toolbar.svg">qml/MultiFunctionImageTool/images/QrButton_toolbar.svg</file>
+        <file alias="images/QrButton_toolbar_27x27.png">qml/MultiFunctionImageTool/images/QrButton_toolbar_27x27.png</file>
+        <file alias="images/back.png">qml/MultiFunctionImageTool/images/back.png</file>
+        <file alias="images/button_bg.svg">qml/MultiFunctionImageTool/images/button_bg.svg</file>
+        <file alias="images/button_bg_40x40.png">qml/MultiFunctionImageTool/images/button_bg_40x40.png</file>
+        <file alias="images/button_pressed_bg.svg">qml/MultiFunctionImageTool/images/button_pressed_bg.svg</file>
+        <file alias="images/button_pressed_bg_40x40.png">qml/MultiFunctionImageTool/images/button_pressed_bg_40x40.png</file>
+        <file alias="images/cropRectangleBorder.PNG">qml/MultiFunctionImageTool/images/cropRectangleBorder.PNG</file>
+        <file alias="images/image.jpg">qml/MultiFunctionImageTool/images/image.jpg</file>
+        <file alias="images/questionMark.svg">qml/MultiFunctionImageTool/images/questionMark.svg</file>
+        <file alias="images/questionMark_27x27.png">qml/MultiFunctionImageTool/images/questionMark_27x27.png</file>
+        <file alias="images/save.svg">qml/MultiFunctionImageTool/images/save.svg</file>
+        <file alias="images/save_27x27.png">qml/MultiFunctionImageTool/images/save_27x27.png</file>
+    </qresource>
+</RCC>

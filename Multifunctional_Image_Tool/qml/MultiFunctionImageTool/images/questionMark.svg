@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- Converted with SVG Converter - Version 0.9.5 (Compiled Mon May 30 09:08:51 2011) - Copyright (C) 2011 Nokia -->
+<svg xmlns="http://www.w3.org/2000/svg" width="35px" x="0px" version="1.1" y="0px" height="35px" viewBox="0 0 35 35" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="tiny" id="Layer_1" xml:space="preserve">
+ <font horiz-adv-x="1000">
+  <font-face underline-position="-100" font-family="MyriadPro-Regular" underline-thickness="50" units-per-em="1000"/>
+  <missing-glyph horiz-adv-x="500" d="M0,0l500,0l0,700l-500,0M250,395l-170,255l340,0M280,350l170,255l0,-510M80,50l170,255l170,-255M50,605l170,-255l-170,-255z"/>
+  <glyph horiz-adv-x="406" unicode="?" d="M220,192l-2,25C215,268 231,313 275,365C323,422 361,471 361,539C361,615 309,686 194,686C141,686 85,670 51,646l24,-63C100,602 140,614 176,614C239,613 271,579 271,528C271,483 246,444 201,391C151,331 133,271 139,218l2,-26M178,-11C215,-11 238,16 238,51C238,88 215,114 179,114C145,114 120,88 120,51C120,16 144,-11 178,-11z"/>
+ </font>
+ <rect width="26.992" x="4.458" y="4.444" fill="none" height="28.138"/>
+ <text fill="#FFFFFF" font-family="'MyriadPro-Regular'" transform="matrix(1 0 0 1 10.6465 30.0039)" font-size="36">?</text>
+</svg>

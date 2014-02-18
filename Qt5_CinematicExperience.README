@@ -1,0 +1,13 @@
+	Qt5_CinematicExperience ported to Android/Qt5
+	---------------------------------------------
+	by Niels Mayer < Niels.Mayer AT Gmail DOT com >
+	http://www.nielsmayer.com
+
+* Works on Android 4.2.X using Qt 5.2.1
+* Works on Linux Desktop using Qt 5.2.1
+* See http://quitcoding.com/?page=work#cinex 
+* Original sourcecode
+  http://quitcoding.com/download/Qt5_CinematicExperience_1.0.tgz
+* Updated to include QML via Qt resources in file 
+  Qt5_CinematicExperience-default.qrc
+

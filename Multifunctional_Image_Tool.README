@@ -1,0 +1,18 @@
+	Multifunctional_Image_Tool ported from Qt4 on Symbian to Qt5 
+	------------------------------------------------------------
+	by Niels Mayer < Niels.Mayer AT Gmail DOT com >
+	http://www.nielsmayer.com
+
+* Works on Desktop Linux w/ Qt 5.2.1
+* Works on Android 4.2.X w/ Qt 5.2.1
+* Originally from
+  http://developer.nokia.com/community/wiki/Multifunctional_Image_Tool:_A_base_for_image_interaction
+* original sourcecode from
+  http://developer.nokia.com/community/wiki/images/6/60/Multifunctional_Image_Tool_source.zip?20120520183942
+  with following log entry:
+
+> 20:39, 20 May 2012	(2.29 MB)
+> favoritas37 
+> Fixed an important bug in pinching. - Added horizontal flicking even
+> when image fits the screen. - Made platform independent. Removed all
+> Symbian specific code. Category:QtCategory:Qt Quick
