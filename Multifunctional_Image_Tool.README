@@ -3,7 +3,7 @@
 	by Niels Mayer < Niels.Mayer AT Gmail DOT com >
 	http://www.nielsmayer.com
 
-* Works on Desktop Linux w/ Qt 5.2.1
+* Works on Desktop Linux w/ Qt 5.2.1 (Ubuntu 12.04.4 LTS)
 * Works on Android 4.2.X w/ Qt 5.2.1
 * Originally from
   http://developer.nokia.com/community/wiki/Multifunctional_Image_Tool:_A_base_for_image_interaction
