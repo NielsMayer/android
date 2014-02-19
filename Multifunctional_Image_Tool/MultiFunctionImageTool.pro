@@ -6,7 +6,8 @@ SOURCES += main.cpp \
 
 RESOURCES += MultiFunctionImageTool-default.qrc
 
-QT +=  core gui network widgets qml quick
+QT += widgets quick
+unix:target.path = /usr/local/bin
 
 INSTALLS += target
 
