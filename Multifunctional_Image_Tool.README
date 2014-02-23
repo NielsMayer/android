@@ -16,3 +16,56 @@
 > Fixed an important bug in pinching. - Added horizontal flicking even
 > when image fits the screen. - Made platform independent. Removed all
 > Symbian specific code. Category:QtCategory:Qt Quick
+
+------------------------------------------------------------------------------
+
+In main.cpp, note:
+    viewer->engine()->addImageProvider(imageHandler->providerName(), imageHandler);
+implemented by imagehandler.cpp
+
+https://qt-project.org/doc/qt-5.0/qtqml/qqmlengine.html#addImageProvider
+
+> void QQmlEngine::addImageProvider(const QString & providerId, QQmlImageProviderBase * provider)
+> 
+> Sets the provider to use for images requested via the image: url scheme,
+> with host providerId. The QQmlEngine takes ownership of provider.
+> 
+> Image providers enable support for pixmap and threaded image requests. See
+> the QQuickImageProvider documentation for details on implementing and using
+> image providers.
+> 
+> All required image providers should be added to the engine before any QML
+> sources files are loaded.
+> 
+> See also removeImageProvider(), QQuickImageProvider, and
+> QQmlImageProviderBase.
+
+==============================================================================
+
+Note Qt 5.2.1 "behavioral changes"
+https://qt-project.org/doc/qt-5/qtquick-porting-qt5.html#behavioral-changes
+> "Modifying the Image::sourceSize now fits the image to the size,
+> maintaining aspect ratio."
+
+Note that sourceSize is never set in the sourcecode, just used for
+scaling/etc.:
+
+InteractionArea.qml:11:    property alias sourceSize: image.sourceSize
+InteractionArea.qml:25:        property real aspectRatio: (image.sourceSize.width / image.sourceSize.height)
+InteractionArea.qml:84:                finalWidth = Math.min(finalWidth, image.sourceSize.width)
+InteractionArea.qml:85:                finalHeight = Math.min(finalHeight, image.sourceSize.height)
+MainPage.qml:71:            scaleRatio = interactionArea.contentHeight / interactionArea.sourceSize.height
+MainPage.qml:73:            scaleRatio = interactionArea.contentWidth / interactionArea.sourceSize.width
+
+https://qt-project.org/doc/qt-5/qml-qtquick-image.html#sourceSize-prop
+
+> If the source is a non-scalable image (eg. JPEG), the loaded image will be
+> no greater than this property specifies. For some formats (currently only
+> JPEG), the whole image will never actually be loaded into memory.
+> 
+> sourceSize can be cleared to the natural size of the image by setting
+> sourceSize to undefined.
+> 
+> Note: Changing this property dynamically causes the image source to be
+> reloaded, potentially even from the network, if it is not in the disk
+> cache.
