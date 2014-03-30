@@ -3,8 +3,8 @@
 	by Niels Mayer < Niels.Mayer AT Gmail DOT com >
 	http://www.nielsmayer.com
 
-* Works on Android 4.2.X using Qt 5.2.1
-* Works on Linux Desktop using Qt 5.2.1 (Ubuntu 12.04.4 LTS)
+* Tested on Android 4.2.X using Qt 5.2.1 or Qt 5.3.0 beta
+* Tested on Linux Desktop using Qt 5.2.1 or Qt 5.3.0 beta (Ubuntu 12.04.4 LTS)
 * See http://quitcoding.com/?page=work#cinex 
 * Original sourcecode
   http://quitcoding.com/download/Qt5_CinematicExperience_1.0.tgz
