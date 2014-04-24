@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<Manifest xmlns="http://schemas.tizen.org/2012/12/manifest">
+    <Id>NFNy2BenTU</Id>
+    <Version>0.0.1</Version>
+    <Type>C++App</Type>
+    <Requirements>
+        <Feature Name="http://tizen.org/feature/screen.size.normal.720.1280">true</Feature>
+    </Requirements>
+    <Apps>
+        <ApiVersion>2.2</ApiVersion>
+        <Privileges>
+            <Privilege>http://tizen.org/privilege/fullscreen</Privilege>
+            <Privilege>http://tizen.org/privilege/filesystem.write</Privilege>
+            <Privilege>http://tizen.org/privilege/filesystem.read</Privilege>
+        </Privileges>
+        <UiApp Main="True" MenuIconVisible="True" Name="qt5cinematic" LaunchingHistoryVisible="True">
+            <UiScalability LogicalCoordinate="720" BaseScreenSize="Normal" CoordinateSystem="Logical"/>
+            <UiTheme SystemTheme="White"/>
+            <DisplayNames>
+                <DisplayName Locale="eng">Qt5 Cinematic Experience</DisplayName>
+                <DisplayName Locale="eng-US">Qt5 Cinematic Experience</DisplayName>
+                <DisplayName Locale="eng-UK">Qt5 Cinematic Experience</DisplayName>
+            </DisplayNames>
+            <Icons>
+                <Icon Section="MainMenu">mainmenu.png</Icon>
+            </Icons>
+            <LaunchConditions/>
+        </UiApp>
+    </Apps>
+    <Author>Niels P. Mayer</Author>
+    <Descriptions>
+        <Description Locale="eng">Qt5 Cinematic Experience is a demo application using Qt5, written in C++ and QML.</Description>
+        <Description Locale="eng-US">Qt5 Cinematic Experience is a demo application using Qt5, written in C++ and QML.</Description>
+        <Description Locale="eng-UK">Qt5 Cinematic Experience is a demo application using Qt5, written in C++ and QML.</Description>
+    </Descriptions>
+</Manifest>
