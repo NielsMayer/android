@@ -16,13 +16,33 @@
 
 //#include <QZXing.h>
 
-Q_DECL_EXPORT int main(int argc, char *argv[])
+#ifdef Q_OS_LINUX_TIZEN_MOBILE
+extern "C" int OspMain(int argc, char *argv[]);
+#endif /* Q_OS_LINUX_TIZEN_MOBILE */
+
+int main(int argc, char* argv[])
 {
-#if QT_VERSION >= 0x050000
-    QGuiApplication app(argc,argv);
-#else
-    QScopedPointer<QApplication> app(createApplication(argc, argv));
-#endif /* QT_VERSION */
+#ifdef Q_OS_LINUX_TIZEN_MOBILE
+    return OspMain(argc,argv);
+}
+
+/* NB: Tizen Mobile, but not Desktop (haven't checked emulator) requires
+ * this indirection via 'OspMain() otherwise the application will not launch
+ * from the desktop icon.
+ * (However, it can be launched directly from /opt/apps/.../bin/qt5cinematic.exe as root from shell)
+ */
+extern "C" int OspMain(int argc, char *argv[])
+{
+#endif /* Q_OS_LINUX_TIZEN_MOBILE */
+
+#ifdef Q_OS_LINUX_TIZEN_SIMULATOR
+    qputenv("QSG_RENDER_LOOP","windows");
+#endif /* Q_OS_LINUX_TIZEN_SIMULATOR */
+#ifndef Q_OS_ANDROID
+    qputenv("QT_QUICK_CONTROLS_STYLE","Tizen");
+#endif
+
+    QGuiApplication* app = new QGuiApplication(argc,argv);
 
 //  QZXing::registerQMLTypes();
 
@@ -39,27 +59,17 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     // NPM original static allocation had issue calling superclass destructor on app close
     // ~QQuickView() -> ~QQuickWindow() -> segfault
     // so again, use dynamic allocation of QQuickView,
-#if QT_VERSION >= 0x050000
     QQuickView*           viewer = new QQuickView();
-#else
-    QmlApplicationViewer* viewer = new QmlApplicationViewer();
-#endif
-
     viewer->rootContext()->setContextProperty("imageHandler", imageHandler);
     // NPM -- pass viewer to QML -- viewer.width and viewer.height give display dimensions
     viewer->rootContext()->setContextProperty("viewer", viewer);
     viewer->engine()->addImageProvider(imageHandler->providerName(), imageHandler);
-#if QT_VERSION >= 0x050000
     viewer->setSource(QUrl("qrc:///main.qml"));
+
 #if (defined(Q_OS_ANDROID) || defined(Q_OS_LINUX_TIZEN) || defined(Q_OS_LINUX_TIZEN_MOBILE) || defined(Q_OS_LINUX_TIZEN_SIMULATOR) || defined(Q_OS_LINUX_TIZEN_IVI))
     viewer->showFullScreen();
 #else // Desktop, etc.
     viewer->show();
 #endif /* Qt5 Q_OS_ANDROID ... */
-#else //orig code from Qt4 version
-    viewer->setMainQmlFile(QLatin1String("qml/MultiFunctionImageTool/main.qml"));
-    viewer->showExpanded();
-#endif
-
-    return app.exec();
+    return app->exec();
 }

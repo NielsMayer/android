@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<Manifest xmlns="http://schemas.tizen.org/2012/12/manifest">
+    <Id>eePjyo9sN9</Id>
+    <Version>0.0.1</Version>
+    <Type>C++App</Type>
+    <Requirements>
+        <Feature Name="http://tizen.org/feature/screen.size.normal.720.1280">true</Feature>
+    </Requirements>
+    <Apps>
+        <ApiVersion>2.2</ApiVersion>
+        <Privileges>
+            <Privilege>http://tizen.org/privilege/fullscreen</Privilege>
+            <Privilege>http://tizen.org/privilege/filesystem.write</Privilege>
+            <Privilege>http://tizen.org/privilege/filesystem.read</Privilege>
+        </Privileges>
+        <UiApp Main="True" Name="MultiFunctionImageTool" LaunchingHistoryVisible="True" MenuIconVisible="True">
+            <UiScalability LogicalCoordinate="720" CoordinateSystem="Logical" BaseScreenSize="Normal"/>
+            <UiTheme SystemTheme="White"/>
+            <DisplayNames>
+                <DisplayName Locale="eng">MultiFunctionImageTool</DisplayName>
+                <DisplayName Locale="eng-US">MultiFunctionImageTool</DisplayName>
+                <DisplayName Locale="eng-UK">MultiFunctionImageTool</DisplayName>
+            </DisplayNames>
+            <Icons>
+                <Icon Section="MainMenu">mainmenu.png</Icon>
+            </Icons>
+            <LaunchConditions/>
+        </UiApp>
+    </Apps>
+    <Author>Niels P. Mayer</Author>
+    <Descriptions>
+        <Description Locale="eng">MultiFunctionImageTool is a demo application using Qt5, written in C++ and QML.</Description>
+        <Description Locale="eng-US">MultiFunctionImageTool is a demo application using Qt5, written in C++ and QML.</Description>
+        <Description Locale="eng-UK">MultiFunctionImageTool is a demo application using Qt5, written in C++ and QML.</Description>
+    </Descriptions>
+    <Url>http://www.nielsmayer.com</Url>
+</Manifest>

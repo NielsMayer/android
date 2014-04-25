@@ -1,0 +1,31 @@
+Allows the application to generate touch and key events, and capture screens.
+                                                             ^^^^^^^^^^^^^^^^
+It is a platform privilege level. For more information, see privileges.
+
+            <Privilege>http://tizen.org/privilege/inputmanager</Privilege>
+
+
+
+Allows the application to be opened conditionally or to open another application:
+
+            <Privilege>http://tizen.org/privilege/application.launch</Privilege>
+
+
+            <Privilege>http://tizen.org/privilege/fullscreen</Privilege>
+            <Privilege>http://tizen.org/privilege/filesystem.write</Privilege>
+            <Privilege>http://tizen.org/privilege/filesystem.read</Privilege>
+        </Privileges>
+
+
+
+==============================================================================
+ http://tizen.org/feature/
+        
+            http://tizen.org/feature/screen.size.normal.600.1024
+            http://tizen.org/feature/screen.size.normal.540.960
+  
+            http://tizen.org/feature/screen.size.normal
+            http://tizen.org/feature/screen.size.large
+            http://tizen.org/feature/screen.size.normal.600.1024
+
+          
